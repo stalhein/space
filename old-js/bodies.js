@@ -14,6 +14,8 @@ export class Bodies {
 
         this.nextBodyID = 0;
         this.data = new Map();
+        this.physics = new Map();
+        this.lighting = new Map();
     }
 
     load() {
@@ -75,12 +77,22 @@ export class Bodies {
 
         gl.bindVertexArray(null);
 
-        this.addBody(0, 0, 0, 0, 0, -12.5, 13e+6, 6e+24);
-        this.addBody(384400000, 0, 0, 0, 0, 1022, 1730000*2, 7.35e+22);
+        // Sun
+        this.addBody(0, 0, 0, 0, 0, 0, 696340000 * 2, 1.989e30, 1.0, 0.8, 0.2, 1.0);
+        // Earth
+        this.addBody(149.6e9, 0, 0, 0, 0, 29780, 6371000 * 2, 5.972e24, 0.2, 0.5, 0.9, 0.0);
+        // Moon
+        this.addBody(149.6e9 + 384400000, 0, 0, 0, 0, 29780 + 1022, 1737000*2, 7.35e22, 0.7, 0.7, 0.7, 0.1);
     }
 
-    addBody(x, y, z, vx, vy, vz, size, mass) {
-        this.data.set(this.nextBodyID, {position: vec3.fromValues(x, y, z), size: size, mass: mass, velocity: vec3.fromValues(vx, vy, vz)});
+    addBody(x, y, z, vx, vy, vz, size, mass, r, g, b, emmitance) {
+        this.data.set(this.nextBodyID, {
+            position: vec3.fromValues(x, y, z),
+            velocity: vec3.fromValues(vx, vy, vz),
+            size: size,
+            mass: mass,
+            colour: vec3.fromValues(r, g, b),
+            emmitance: emmitance});
         this.nextBodyID++;
     }
 
@@ -147,7 +159,9 @@ export class Bodies {
         gl.bindVertexArray(this.vao);
 
         let model = mat4.create();
-        for (let [id, body] of this.data) {
+        const bodies = Array.from(this.data.values());
+        for (let i = 0; i < bodies.length; ++i) {
+            const body = bodies[i];
             mat4.identity(model);
             const renderPos = vec3.create();
             vec3.scale(renderPos, body.position, Constants.RENDER_CONSTANT);
@@ -157,7 +171,13 @@ export class Bodies {
 
             shader.setMat4("uModel", model);
 
+            shader.setVec3("uColour", body.colour);
+
+            shader.setFloat("uEmmiter", body.emmitance);
+
             gl.drawElements(gl.TRIANGLES, this.elementsCount, gl.UNSIGNED_INT, 0);
+
+            if (body.emmitance == 0.0) console.log(body.position[0]);
         }
 
         gl.bindVertexArray(null);

@@ -43,7 +43,7 @@ function render(time) {
 
     bodies.update(dt * Constants.TIME_SCALE);
 
-    gl.clearColor(0.5, 0.65, 0.8, 1.0);
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     const projection = mat4.create();
@@ -52,7 +52,7 @@ function render(time) {
         Math.PI / 3,
         canvas.width / canvas.height,
         0.1,
-        50000.0
+        500000.0
     );
 
     shader.use();

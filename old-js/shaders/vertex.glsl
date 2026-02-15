@@ -8,10 +8,13 @@ uniform mat4 uView;
 uniform mat4 uProjection;
 uniform mat4 uModel;
 
+out vec3 vFragPos;
 out vec3 vNormal;
 
 void main() {
     vec4 worldPos = uModel * vec4(aPos, 1.0);
+
+    vFragPos = worldPos.xyz;
 
     gl_Position = uProjection * uView * worldPos;
 
