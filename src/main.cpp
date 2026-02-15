@@ -3,6 +3,10 @@
 
 #include "bodies.hpp"
 
+void framebuffer_size_callback(GLFWwindow*, int width, int height);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+void processInput(GLFWwindow* window);
+
 int main()
 {
     GLFWwindow* window;
@@ -20,11 +24,16 @@ int main()
     }
 
     glfwMakeContextCurrent(window);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetCursorPosCallback(window, mouse_callback);
+
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         glfwTerminate();
         return -1;
     }
+
+    glEnable(GL_DEPTH_TEST);
 
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
@@ -36,4 +45,19 @@ int main()
     glfwTerminate();
 
     return 0;
+}
+
+void framebuffer_size_callback(GLFWwindow*, int width, int height);
+{
+    glViewport(0, 0, width, height);
+}
+
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+
+}
+
+void processInput(GLFWwindow* window)
+{
+
 }
