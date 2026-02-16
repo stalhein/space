@@ -11,11 +11,11 @@ Bodies::Bodies() : shader("../shaders/vertex.glsl", "../shaders/fragment.glsl")
     std::vector<unsigned int> elements;
 
     for (int lat = 0; lat <= RESOLUTION; ++lat) {
-        const float alpha = lat * M_PI / RESOLUTION;
+        const float alpha = lat * glm::pi<float>() / RESOLUTION;
         const float sinAlpha = sin(alpha);
         const float cosAlpha = cos(alpha);
         for (int lon = 0; lon <= RESOLUTION; ++lon) {
-            const float beta = lon * 2 * M_PI / RESOLUTION;
+            const float beta = lon * 2 * glm::pi<float>() / RESOLUTION;
             const float sinBeta = sin(beta);
             const float cosBeta = cos(beta);
 
