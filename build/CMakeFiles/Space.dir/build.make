@@ -128,9 +128,13 @@ Space: CMakeFiles/Space.dir/src/bodies.cpp.o
 Space: CMakeFiles/Space.dir/src/main.cpp.o
 Space: CMakeFiles/Space.dir/build.make
 Space: CMakeFiles/Space.dir/compiler_depend.ts
-Space: /usr/lib/libglfw.so.3.4
-Space: /usr/lib/libGLX.so
+Space: _deps/glfw-build/src/libglfw3.a
 Space: /usr/lib/libOpenGL.so
+Space: /usr/lib/libGLX.so
+Space: /usr/lib/libGLU.so
+Space: /usr/lib/librt.a
+Space: /usr/lib/libm.so
+Space: /usr/lib/libX11.so
 Space: CMakeFiles/Space.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/twhite/Projects/Space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Space"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Space.dir/link.txt --verbose=$(VERBOSE)

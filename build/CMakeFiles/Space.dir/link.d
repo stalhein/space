@@ -5,9 +5,13 @@ Space: \
   CMakeFiles/Space.dir/external/glad/src/glad.c.o \
   CMakeFiles/Space.dir/src/bodies.cpp.o \
   CMakeFiles/Space.dir/src/main.cpp.o \
-  /usr/lib/libglfw.so.3.4 \
-  /usr/lib/libGLX.so \
+  _deps/glfw-build/src/libglfw3.a \
   /usr/lib/libOpenGL.so \
+  /usr/lib/libGLX.so \
+  /usr/lib/libGLU.so \
+  /usr/lib/librt.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libdl.a \
+  /usr/lib/libX11.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -35,9 +39,8 @@ Space: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o \
   /usr/lib/libGLdispatch.so.0 \
-  /usr/lib/libX11.so.6 \
-  /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libxcb.so.1 \
+  /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libXau.so.6 \
   /usr/lib/libXdmcp.so.6
 
@@ -53,11 +56,19 @@ CMakeFiles/Space.dir/src/bodies.cpp.o:
 
 CMakeFiles/Space.dir/src/main.cpp.o:
 
-/usr/lib/libglfw.so.3.4:
+_deps/glfw-build/src/libglfw3.a:
+
+/usr/lib/libOpenGL.so:
 
 /usr/lib/libGLX.so:
 
-/usr/lib/libOpenGL.so:
+/usr/lib/libGLU.so:
+
+/usr/lib/librt.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libdl.a:
+
+/usr/lib/libX11.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 
@@ -113,11 +124,9 @@ CMakeFiles/Space.dir/src/main.cpp.o:
 
 /usr/lib/libGLdispatch.so.0:
 
-/usr/lib/libX11.so.6:
+/usr/lib/libxcb.so.1:
 
 /usr/lib/ld-linux-x86-64.so.2:
-
-/usr/lib/libxcb.so.1:
 
 /usr/lib/libXau.so.6:
 

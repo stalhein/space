@@ -35,6 +35,7 @@ int main()
     glfwWindowHint(GLFW_FLOATING, GLFW_TRUE);
     glfwWindowHint(GLFW_DECORATED, GLFW_FALSE);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 
     window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Hello, world!", NULL, NULL);
