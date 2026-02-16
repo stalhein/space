@@ -29,3 +29,23 @@ add_custom_target(run
     DEPENDS Space
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
 )
+
+install(TARGETS Space DESTINATION bin)
+
+set(CPACK_PACKAGE_NAME "Space")
+set(CPACK_PACKAGE_VENDOR "Stalhein")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Space simulator with the Sun, Earth and the Moon.")
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+
+if (WIN32)
+    set(CPACK_GENERATOR "NSIS")
+    set(CPACK_SOURCE_GENERATOR "ZIP")
+elseif(APPLE)
+    set(CPACK_GENERATOR "DragNDrop")
+elseif(UNIX AND NOT APPLE)
+    set(CPACK_GENERATOR "External")
+    set(CPACK_DEBIAN_PACKAGE_MAINTAINER "erich.stalhein@proton.me")
+    set(CPACK_GENERATOR "TGZ")
+endif()
+
+include(CPack)

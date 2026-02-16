@@ -1,0 +1,60 @@
+name: Build Multi-Platform
+on: [push, pull_request]
+
+jobs:
+    build:
+        name: ${{ matrix.os }} Build
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                # This starts 3 parallel computers
+                os: [ubuntu-latest, windows-latest, macos-latest]
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            # --- Install Dependencies for each OS ---
+            - name: Dependencies (Linux)
+              if: runner.os == 'Linux'
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl1-mesa-dev
+
+            - name: Dependencies (Windows)
+              if: runner.os == 'Windows'
+              run: choco install nsis # Needed for making the .exe installer
+
+            # --- Build Process ---
+            - name: Configure CMake
+              run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+            - name: Build
+              run: cmake --build build --config Release
+
+            # --- Packaging ---
+            - name: Package (Windows/Mac)
+              if: runner.os != 'Linux'
+              working-directory: build
+              run: cpack -C Release
+
+            - name: Build AppImage (Linux)
+              if: runner.os == 'Linux'
+              run: |
+                  # This downloads the 'linuxdeploy' tool you asked about
+                  wget -q https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+                  chmod +x linuxdeploy-x86_64.AppImage
+                  # We manually bundle the app into a folder, then make it an AppImage
+                  mkdir -p dist
+                  cp build/Space dist/
+                  ./linuxdeploy-x86_64.AppImage --appdir dist --output appimage
+
+            # --- Save the files so you can download them ---
+            - name: Upload Artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: Binary-${{ matrix.os }}
+                  path: |
+                      build/*.exe
+                      build/*.dmg
+                      *.AppImage
