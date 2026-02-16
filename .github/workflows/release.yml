@@ -5,6 +5,9 @@ on:
         tags:
     workflow_dispatch: # Allows you to trigger manually from the Actions tab
 
+permissions:
+    contents: write
+
 jobs:
     build:
         name: Build on ${{ matrix.os }}
