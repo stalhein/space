@@ -1,3 +1,4 @@
+cmake_policy(VERSION 3.21)
 cmake_minimum_required(VERSION 3.16...3.28)
 project(Space VERSION 1.0 LANGUAGES C CXX)
 
@@ -6,30 +7,32 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 
+# GLFW
 FetchContent_Declare(
     glfw
     GIT_REPOSITORY https://github.com/glfw/glfw.git
     GIT_TAG 3.3.8
 )
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
+
 FetchContent_MakeAvailable(glfw)
 
+# GLM
 FetchContent_Declare(
     glm
     GIT_REPOSITORY https://github.com/g-truc/glm.git
     GIT_TAG 0.9.9.8
 )
-
 FetchContent_GetProperties(glm)
 if(NOT glm_POPULATED)
     FetchContent_Populate(glm)
 endif()
 
+# OpenGL
+find_package(OpenGL REQUIRED)
 
 file(GLOB_RECURSE SRC_FILES
-    src/*.cpp
-    external/glad/src/glad.c
+    "src/*.cpp"
+    "external/glad/src/glad.c"
 )
 
 add_executable(Space ${SRC_FILES})
@@ -38,31 +41,20 @@ target_include_directories(Space PRIVATE
     src
     include
     external/glad/include
+    ${glm_SOURCE_DIR}
 )
-target_include_directories(Space PRIVATE ${glm_SOURCE_DIR})
 
-find_package(OpenGL REQUIRED)
-target_link_libraries(Space PRIVATE
+target_link_libraries(Space PRIVATE 
     glfw
-    ${OPENGL_LIBRARIES}
+    OpenGL::GL
 )
 
-add_custom_target(run
-    COMMAND $<TARGET_FILE:Space>
-    DEPENDS Space
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-)
-
-if(APPLE)
-    target_link_libraries(Space PRIVATE "-framework Cocoa" "-framework IOKit" "-framework CoreVideo")
+if(WIN32)
+    target_link_libraries(Space PRIVATE opengl32)
 endif()
 
-install(TARGETS Space DESTINATION bin)
-
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/shaders/ DESTINATION shaders)
-
-set(CPACK_PACKAGE_NAME "Space")
-set(CPACK_PACKAGE_VENDOR "Stalhein")
-set(CPACK_GENERATOR "ZIP")
-
-include(CPack)
+add_custom_target(run
+    COMMAND Space
+    DEPENDS Space
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+)

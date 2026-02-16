@@ -40,7 +40,7 @@ int main()
     glfwWindowHint(GLFW_DECORATED, GLFW_FALSE);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-
+    glfwWindowHint(GLFW_SCALE_TO_MONITOR, GLFW_TRUE);
 
     window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Hello, world!", NULL, NULL);
     if (!window) {
@@ -69,8 +69,6 @@ int main()
         lastFrame = currentFrame;
 
         processInput(window);
-
-        std::cout << camera.yaw << " " << camera.pitch << "\n";
 
         bodies.update(deltaTime);
 

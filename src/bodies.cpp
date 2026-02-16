@@ -3,7 +3,7 @@
 constexpr double G = 6.67430e-11;
 
 
-Bodies::Bodies() : shader("../shaders/vertex.glsl", "../shaders/fragment.glsl")
+Bodies::Bodies() : shader("shaders/vertex.glsl", "shaders/fragment.glsl")
 {
     const int RESOLUTION = 30;
 
