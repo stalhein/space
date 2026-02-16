@@ -235,6 +235,27 @@ CMakeFiles/Space.dir/src/bodies.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
+ /usr/include/glm/gtc/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_projection.hpp \
+ /usr/include/glm/gtc/constants.hpp \
+ /usr/include/glm/ext/scalar_constants.hpp \
+ /usr/include/glm/ext/scalar_constants.inl \
+ /usr/include/glm/gtc/constants.inl \
+ /usr/include/glm/ext/matrix_projection.inl \
+ /usr/include/glm/ext/matrix_clip_space.hpp \
+ /usr/include/glm/ext/matrix_clip_space.inl \
+ /usr/include/glm/ext/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_transform.inl \
+ /usr/include/glm/gtc/matrix_transform.inl \
+ /usr/include/c++/15.2.1/algorithm \
+ /usr/include/c++/15.2.1/bits/stl_algo.h \
+ /usr/include/c++/15.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/15.2.1/bits/stl_heap.h \
+ /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
+ /usr/include/c++/15.2.1/cstdlib \
+ /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/15.2.1/pstl/execution_defs.h \
  /home/twhite/Projects/Space/include/shader.hpp \
  /usr/include/c++/15.2.1/string /usr/include/c++/15.2.1/bits/stringfwd.h \
  /usr/include/c++/15.2.1/bits/char_traits.h \
@@ -254,9 +275,8 @@ CMakeFiles/Space.dir/src/bodies.cpp.o: \
  /usr/include/c++/15.2.1/string_view \
  /usr/include/c++/15.2.1/bits/string_view.tcc \
  /usr/include/c++/15.2.1/ext/string_conversions.h \
- /usr/include/c++/15.2.1/cstdlib /usr/include/c++/15.2.1/cstdio \
- /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
- /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/c++/15.2.1/cstdio /usr/include/stdio.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/c++/15.2.1/cerrno \
@@ -312,4 +332,5 @@ CMakeFiles/Space.dir/src/bodies.cpp.o: \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.2.1/bits/fstream.tcc /usr/include/c++/15.2.1/sstream \
  /usr/include/c++/15.2.1/bits/sstream.tcc \
- /usr/include/c++/15.2.1/iostream
+ /usr/include/c++/15.2.1/iostream \
+ /home/twhite/Projects/Space/include/constants.hpp

@@ -12,46 +12,45 @@ enum CameraMovement {
     LEFT
 };
 
-constexpr float YAW = -90.0f;
-constexpr float PITCH = 0.0f;
-constexpr float SPEED = 10.0f;
+constexpr float SPEED = 1000000000.0f;
 constexpr float SENSITIVITY = 0.1f;
 
 class Camera
 {
 public:
-    glm::vec3 position, front, frontXZ, up, right, worldUp;
+    glm::dvec3 position;
+    glm::vec3 front, frontXZ, up, right, worldUp;
     float yaw, pitch, speed, sensitivity;
     
 
-    Camera(glm::vec3 position)
+    Camera(glm::dvec3 startPosition, float startYaw, float startPitch)
     {
-        position = position;
-        front = glm::vec3(0.0f, 0.0f, -1.0f);
+        position = startPosition;
+        front = glm::vec3(0.0f);
         frontXZ = glm::vec3(front.x, 0.0f, front.z);
         up = glm::vec3(0.0f, 1.0f, 0.0f);
         worldUp = up;
-        yaw = YAW;
-        pitch = PITCH;
+        yaw = startYaw;
+        pitch = startPitch;
         speed = SPEED;
         sensitivity = SENSITIVITY;
         updateCameraVectors();
     }
 
-    glm::mat4 getViewMatrix()
+    glm::mat4 getViewMatrix(double RENDER_SCALE)
     {
-        return glm::lookAt(position, position + front, up);
+        return glm::lookAt(glm::vec3(position) * glm::vec3(RENDER_SCALE), glm::vec3(position * RENDER_SCALE) + front, up);
     }
 
     void processKeyboard(CameraMovement direction, float deltaTime)
     {
         float velocity = speed * deltaTime;
-        if (direction == FORWARDS) position += frontXZ * velocity;
-        if (direction == BACKWARDS) position -= frontXZ * velocity;
-        if (direction == UPWARDS) position += worldUp * velocity;
-        if (direction == DOWNWARDS) position -= worldUp * velocity;
-        if (direction == RIGHT) position += right * velocity;
-        if (direction == LEFT) position -= right * velocity;
+        if (direction == FORWARDS) position += glm::dvec3(frontXZ * velocity);
+        if (direction == BACKWARDS) position -= glm::dvec3(frontXZ * velocity);
+        if (direction == UPWARDS) position += glm::dvec3(worldUp * velocity);
+        if (direction == DOWNWARDS) position -= glm::dvec3(worldUp * velocity);
+        if (direction == RIGHT) position += glm::dvec3(right * velocity);
+        if (direction == LEFT) position -= glm::dvec3(right * velocity);
     }
 
     void processMouse(float xoffset, float yoffset)
