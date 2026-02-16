@@ -20,7 +20,13 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/g-truc/glm.git
     GIT_TAG 0.9.9.8
 )
-FetchContent_MakeAvailable(glm)
+
+FetchContent_GetProperties(glm)
+if(NOT glm_POPULATED)
+    FetchContent_Populate(glm)
+endif()
+
+target_include_directories(Space PRIVATE ${glm_SOURCE_DIR})
 
 file(GLOB_RECURSE SRC_FILES
     src/*.cpp
@@ -38,7 +44,6 @@ target_include_directories(Space PRIVATE
 find_package(OpenGL REQUIRED)
 target_link_libraries(Space PRIVATE
     glfw
-    glm
     ${OPENGL_LIBRARIES}
 )
 
