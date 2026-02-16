@@ -9,6 +9,10 @@
 
 #include "constants.hpp"
 
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
+
 void framebuffer_size_callback(GLFWwindow*, int width, int height);
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
 void processInput(GLFWwindow* window);
