@@ -26,7 +26,6 @@ if(NOT glm_POPULATED)
     FetchContent_Populate(glm)
 endif()
 
-target_include_directories(Space PRIVATE ${glm_SOURCE_DIR})
 
 file(GLOB_RECURSE SRC_FILES
     src/*.cpp
@@ -40,6 +39,7 @@ target_include_directories(Space PRIVATE
     include
     external/glad/include
 )
+target_include_directories(Space PRIVATE ${glm_SOURCE_DIR})
 
 find_package(OpenGL REQUIRED)
 target_link_libraries(Space PRIVATE
