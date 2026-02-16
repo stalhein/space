@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twhite/Projects/space
+CMAKE_SOURCE_DIR = /home/twhite/Projects/Space
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twhite/Projects/space/build
+CMAKE_BINARY_DIR = /home/twhite/Projects/Space/build
 
 # Utility rule file for run.
 
@@ -67,7 +67,7 @@ include CMakeFiles/run.dir/compiler_depend.make
 include CMakeFiles/run.dir/progress.make
 
 CMakeFiles/run: Space
-	/home/twhite/Projects/space/build/Space
+	/home/twhite/Projects/Space/build/Space
 
 CMakeFiles/run.dir/codegen:
 .PHONY : CMakeFiles/run.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /home/twhite/Projects/space/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twhite/Projects/space /home/twhite/Projects/space /home/twhite/Projects/space/build /home/twhite/Projects/space/build /home/twhite/Projects/space/build/CMakeFiles/run.dir/DependInfo.cmake "--color=$(COLOR)" run
+	cd /home/twhite/Projects/Space/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twhite/Projects/Space /home/twhite/Projects/Space /home/twhite/Projects/Space/build /home/twhite/Projects/Space/build /home/twhite/Projects/Space/build/CMakeFiles/run.dir/DependInfo.cmake "--color=$(COLOR)" run
 .PHONY : CMakeFiles/run.dir/depend
 

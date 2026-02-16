@@ -1,4 +1,4 @@
-/home/twhite/Projects/space/build/CMakeFiles/Space.dir
-/home/twhite/Projects/space/build/CMakeFiles/run.dir
-/home/twhite/Projects/space/build/CMakeFiles/edit_cache.dir
-/home/twhite/Projects/space/build/CMakeFiles/rebuild_cache.dir
+/home/twhite/Projects/Space/build/CMakeFiles/Space.dir
+/home/twhite/Projects/Space/build/CMakeFiles/run.dir
+/home/twhite/Projects/Space/build/CMakeFiles/edit_cache.dir
+/home/twhite/Projects/Space/build/CMakeFiles/rebuild_cache.dir

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twhite/Projects/space
+CMAKE_SOURCE_DIR = /home/twhite/Projects/Space
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twhite/Projects/space/build
+CMAKE_BINARY_DIR = /home/twhite/Projects/Space/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Space.dir/depend.make
@@ -73,46 +73,46 @@ CMakeFiles/Space.dir/codegen:
 .PHONY : CMakeFiles/Space.dir/codegen
 
 CMakeFiles/Space.dir/external/glad/src/glad.c.o: CMakeFiles/Space.dir/flags.make
-CMakeFiles/Space.dir/external/glad/src/glad.c.o: /home/twhite/Projects/space/external/glad/src/glad.c
+CMakeFiles/Space.dir/external/glad/src/glad.c.o: /home/twhite/Projects/Space/external/glad/src/glad.c
 CMakeFiles/Space.dir/external/glad/src/glad.c.o: CMakeFiles/Space.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/twhite/Projects/space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Space.dir/external/glad/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Space.dir/external/glad/src/glad.c.o -MF CMakeFiles/Space.dir/external/glad/src/glad.c.o.d -o CMakeFiles/Space.dir/external/glad/src/glad.c.o -c /home/twhite/Projects/space/external/glad/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/twhite/Projects/Space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Space.dir/external/glad/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Space.dir/external/glad/src/glad.c.o -MF CMakeFiles/Space.dir/external/glad/src/glad.c.o.d -o CMakeFiles/Space.dir/external/glad/src/glad.c.o -c /home/twhite/Projects/Space/external/glad/src/glad.c
 
 CMakeFiles/Space.dir/external/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Space.dir/external/glad/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twhite/Projects/space/external/glad/src/glad.c > CMakeFiles/Space.dir/external/glad/src/glad.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twhite/Projects/Space/external/glad/src/glad.c > CMakeFiles/Space.dir/external/glad/src/glad.c.i
 
 CMakeFiles/Space.dir/external/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Space.dir/external/glad/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twhite/Projects/space/external/glad/src/glad.c -o CMakeFiles/Space.dir/external/glad/src/glad.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twhite/Projects/Space/external/glad/src/glad.c -o CMakeFiles/Space.dir/external/glad/src/glad.c.s
 
 CMakeFiles/Space.dir/src/bodies.cpp.o: CMakeFiles/Space.dir/flags.make
-CMakeFiles/Space.dir/src/bodies.cpp.o: /home/twhite/Projects/space/src/bodies.cpp
+CMakeFiles/Space.dir/src/bodies.cpp.o: /home/twhite/Projects/Space/src/bodies.cpp
 CMakeFiles/Space.dir/src/bodies.cpp.o: CMakeFiles/Space.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/twhite/Projects/space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Space.dir/src/bodies.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Space.dir/src/bodies.cpp.o -MF CMakeFiles/Space.dir/src/bodies.cpp.o.d -o CMakeFiles/Space.dir/src/bodies.cpp.o -c /home/twhite/Projects/space/src/bodies.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/twhite/Projects/Space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Space.dir/src/bodies.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Space.dir/src/bodies.cpp.o -MF CMakeFiles/Space.dir/src/bodies.cpp.o.d -o CMakeFiles/Space.dir/src/bodies.cpp.o -c /home/twhite/Projects/Space/src/bodies.cpp
 
 CMakeFiles/Space.dir/src/bodies.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Space.dir/src/bodies.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twhite/Projects/space/src/bodies.cpp > CMakeFiles/Space.dir/src/bodies.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twhite/Projects/Space/src/bodies.cpp > CMakeFiles/Space.dir/src/bodies.cpp.i
 
 CMakeFiles/Space.dir/src/bodies.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Space.dir/src/bodies.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twhite/Projects/space/src/bodies.cpp -o CMakeFiles/Space.dir/src/bodies.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twhite/Projects/Space/src/bodies.cpp -o CMakeFiles/Space.dir/src/bodies.cpp.s
 
 CMakeFiles/Space.dir/src/main.cpp.o: CMakeFiles/Space.dir/flags.make
-CMakeFiles/Space.dir/src/main.cpp.o: /home/twhite/Projects/space/src/main.cpp
+CMakeFiles/Space.dir/src/main.cpp.o: /home/twhite/Projects/Space/src/main.cpp
 CMakeFiles/Space.dir/src/main.cpp.o: CMakeFiles/Space.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/twhite/Projects/space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Space.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Space.dir/src/main.cpp.o -MF CMakeFiles/Space.dir/src/main.cpp.o.d -o CMakeFiles/Space.dir/src/main.cpp.o -c /home/twhite/Projects/space/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/twhite/Projects/Space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Space.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Space.dir/src/main.cpp.o -MF CMakeFiles/Space.dir/src/main.cpp.o.d -o CMakeFiles/Space.dir/src/main.cpp.o -c /home/twhite/Projects/Space/src/main.cpp
 
 CMakeFiles/Space.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Space.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twhite/Projects/space/src/main.cpp > CMakeFiles/Space.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twhite/Projects/Space/src/main.cpp > CMakeFiles/Space.dir/src/main.cpp.i
 
 CMakeFiles/Space.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Space.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twhite/Projects/space/src/main.cpp -o CMakeFiles/Space.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twhite/Projects/Space/src/main.cpp -o CMakeFiles/Space.dir/src/main.cpp.s
 
 # Object files for target Space
 Space_OBJECTS = \
@@ -132,7 +132,7 @@ Space: /usr/lib/libglfw.so.3.4
 Space: /usr/lib/libGLX.so
 Space: /usr/lib/libOpenGL.so
 Space: CMakeFiles/Space.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/twhite/Projects/space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Space"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/twhite/Projects/Space/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Space"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Space.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -144,6 +144,6 @@ CMakeFiles/Space.dir/clean:
 .PHONY : CMakeFiles/Space.dir/clean
 
 CMakeFiles/Space.dir/depend:
-	cd /home/twhite/Projects/space/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twhite/Projects/space /home/twhite/Projects/space /home/twhite/Projects/space/build /home/twhite/Projects/space/build /home/twhite/Projects/space/build/CMakeFiles/Space.dir/DependInfo.cmake "--color=$(COLOR)" Space
+	cd /home/twhite/Projects/Space/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twhite/Projects/Space /home/twhite/Projects/Space /home/twhite/Projects/Space/build /home/twhite/Projects/Space/build /home/twhite/Projects/Space/build/CMakeFiles/Space.dir/DependInfo.cmake "--color=$(COLOR)" Space
 .PHONY : CMakeFiles/Space.dir/depend
 

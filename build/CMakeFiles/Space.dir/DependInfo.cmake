@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/twhite/Projects/space/external/glad/src/glad.c" "CMakeFiles/Space.dir/external/glad/src/glad.c.o" "gcc" "CMakeFiles/Space.dir/external/glad/src/glad.c.o.d"
-  "/home/twhite/Projects/space/src/bodies.cpp" "CMakeFiles/Space.dir/src/bodies.cpp.o" "gcc" "CMakeFiles/Space.dir/src/bodies.cpp.o.d"
-  "/home/twhite/Projects/space/src/main.cpp" "CMakeFiles/Space.dir/src/main.cpp.o" "gcc" "CMakeFiles/Space.dir/src/main.cpp.o.d"
+  "/home/twhite/Projects/Space/external/glad/src/glad.c" "CMakeFiles/Space.dir/external/glad/src/glad.c.o" "gcc" "CMakeFiles/Space.dir/external/glad/src/glad.c.o.d"
+  "/home/twhite/Projects/Space/src/bodies.cpp" "CMakeFiles/Space.dir/src/bodies.cpp.o" "gcc" "CMakeFiles/Space.dir/src/bodies.cpp.o.d"
+  "/home/twhite/Projects/Space/src/main.cpp" "CMakeFiles/Space.dir/src/main.cpp.o" "gcc" "CMakeFiles/Space.dir/src/main.cpp.o.d"
   "" "Space" "gcc" "CMakeFiles/Space.dir/link.d"
   )
 
