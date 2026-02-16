@@ -59,6 +59,8 @@ endif()
 
 install(TARGETS Space DESTINATION bin)
 
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/shaders/ DESTINATION shaders)
+
 set(CPACK_PACKAGE_NAME "Space")
 set(CPACK_PACKAGE_VENDOR "Stalhein")
 set(CPACK_GENERATOR "ZIP")

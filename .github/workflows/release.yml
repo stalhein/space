@@ -30,11 +30,9 @@ jobs:
             - name: Configure CMake
               run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
-            # Build the project
-            - name: Build
-              run: cmake --build build --config Release
+            - name: Install
+              run: cmake --install build --config Release --prefix build/install
 
-            # Package (Run CPack to create the .zip)
             - name: Package
               run: |
                   cd build
