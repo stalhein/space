@@ -5,33 +5,10 @@ project(Space VERSION 1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include(FetchContent)
-
-# GLFW
-FetchContent_Declare(
-    glfw
-    GIT_REPOSITORY https://github.com/glfw/glfw.git
-    GIT_TAG 3.3.8
-)
-set(GLFW_BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(glfw)
-
-# GLM
-FetchContent_Declare(
-    glm
-    GIT_REPOSITORY https://github.com/g-truc/glm.git
-    GIT_TAG 0.9.9.8
-)
-FetchContent_GetProperties(glm)
-if(NOT glm_POPULATED)
-    FetchContent_Populate(glm)
-endif()
-
-# OpenGL
+# Find installed packages
 find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
+find_package(glm REQUIRED)
 
 file(GLOB_RECURSE SRC_FILES
     "src/*.cpp"
@@ -44,12 +21,12 @@ target_include_directories(Space PRIVATE
     src
     include
     external/glad/include
-    ${glm_SOURCE_DIR}
 )
 
-target_link_libraries(Space PRIVATE 
+target_link_libraries(Space PRIVATE
     glfw
     OpenGL::GL
+    glm::glm
 )
 
 if(WIN32)

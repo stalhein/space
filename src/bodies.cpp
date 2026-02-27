@@ -67,7 +67,7 @@ Bodies::Bodies() : shader("shaders/vertex.glsl", "shaders/fragment.glsl")
     // Earth
     addBody({149.6e9, 0, 0}, {0, 0, 29780}, 6371000.0f, 5.972e24, {0.4f, 0.6f, 0.9f});
     // Moon
-    addBody({149.6e9 + 384400000, 0, 0}, {0.0f, 0.0f, 29780.0f + 1022.0f}, 1737000, 7.35e22, {1.0f, 1.0f, 0.9f});
+    addBody({149.6e9 + 384400000 * std::cos(0.08970992), 384400000 * std::sin(0.08970992), 0}, {0.0f, 0.0f, 29780.0f + 1022.0f}, 1737000, 7.35e22, {1.0f, 1.0f, 0.9f});
 }
 
 void Bodies::addBody(glm::dvec3 position, glm::dvec3 velocity, float radius, float mass, glm::vec3 colour)
