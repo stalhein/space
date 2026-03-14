@@ -21,6 +21,8 @@ struct Body
     float radius;
     float mass;
     glm::vec3 colour;
+    bool emmissive;
+    float albedo;
 };
 
 class Bodies
@@ -40,7 +42,8 @@ private:
     std::vector<Body> bodies;
     int noBodies = 0;
 
-    void addBody(glm::dvec3 position, glm::dvec3 velocity, float radius, float mass, glm::vec3 colour);
+    void addBody(glm::dvec3 position, glm::dvec3 velocity, float radius,
+        float mass, glm::vec3 colour, bool emmissive, float albedo);
 
     std::vector<glm::dvec3> getAccelerations();
 };

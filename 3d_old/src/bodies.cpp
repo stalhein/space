@@ -63,14 +63,15 @@ Bodies::Bodies() : shader("shaders/vertex.glsl", "shaders/fragment.glsl")
     glBindVertexArray(0);
 
     // Sun
-    addBody({0, 0, 0}, {0, 0, 0}, 696340000, 1.989e30, {1.0f, 0.9f, 0.2f});
+    addBody({0, 0, 0}, {0, 0, 0}, 696340000, 1.989e30, {1.0f, 0.9f, 0.2f}, true);
     // Earth
-    addBody({149.6e9, 0, 0}, {0, 0, 29780}, 6371000.0f, 5.972e24, {0.4f, 0.6f, 0.9f});
+    addBody({149.6e9, 0, 0}, {0, 0, 29780}, 6371000.0f, 5.972e24, {0.4f, 0.6f, 0.9f}, false);
     // Moon
-    addBody({149.6e9 + 384400000 * std::cos(0.08970992), 384400000 * std::sin(0.08970992), 0}, {0.0f, 0.0f, 29780.0f + 1022.0f}, 1737000, 7.35e22, {1.0f, 1.0f, 0.9f});
+    addBody({149.6e9 + 384400000 * std::cos(0.08970992), 384400000 * std::sin(0.08970992), 0}, {0.0f, 0.0f, 29780.0f + 1022.0f}, 1737000, 7.35e22, {1.0f, 1.0f, 0.9f}, false);
 }
 
-void Bodies::addBody(glm::dvec3 position, glm::dvec3 velocity, float radius, float mass, glm::vec3 colour)
+void Bodies::addBody(glm::dvec3 position, glm::dvec3 velocity, float radius, float mass,
+    glm::vec3 colour, bool emmissive, float albedo)
 {
     Body body;
     body.position = position;
@@ -78,6 +79,8 @@ void Bodies::addBody(glm::dvec3 position, glm::dvec3 velocity, float radius, flo
     body.radius = radius;
     body.mass = mass;
     body.colour = colour;
+    body.emmissive = emmissive;
+    body.albedo = albedo;
     bodies.push_back(body);
 
     noBodies++;
@@ -142,6 +145,7 @@ void Bodies::render(glm::mat4 projection, glm::mat4 view)
         shader.setMat4("uModel", model);
 
         shader.setVec3("uColour", body.colour);
+        shader.setBool("uEmmissive", body.emmissive);
 
         glBindVertexArray(vao);
         glDrawElements(GL_TRIANGLES, elementsCount, GL_UNSIGNED_INT, 0);
