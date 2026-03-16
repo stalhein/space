@@ -29,4 +29,4 @@ To build and run the programme, you will need:
 * **Esc:** Exit the programme
 
 ## License
-This programme is licensed under the [LICENSE](MIT License).
+This programme is licensed under the [MIT License](LICENSE).
