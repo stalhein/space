@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/twhite/Projects/space/src -I/home/twhite/Projects/space/include -I/home/twhite/Projects/space/external/glad/include
+C_INCLUDES = -I/home/twhite/Projects/space/src -I/home/twhite/Projects/space/include -I/home/twhite/Projects/space/external/glad/include -I/home/twhite/Projects/space/build/_deps/glfw-src/include -I/home/twhite/Projects/space/build/_deps/glm-src
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/twhite/Projects/space/src -I/home/twhite/Projects/space/include -I/home/twhite/Projects/space/external/glad/include
+CXX_INCLUDES = -I/home/twhite/Projects/space/src -I/home/twhite/Projects/space/include -I/home/twhite/Projects/space/external/glad/include -I/home/twhite/Projects/space/build/_deps/glfw-src/include -I/home/twhite/Projects/space/build/_deps/glm-src
 
 CXX_FLAGS = -std=gnu++17
 

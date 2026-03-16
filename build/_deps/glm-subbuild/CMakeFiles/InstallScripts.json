@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/twhite/Projects/space/build/_deps/glm-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

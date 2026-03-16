@@ -112,8 +112,11 @@ Space: CMakeFiles/Space.dir/src/main.cpp.o
 Space: CMakeFiles/Space.dir/external/glad/src/glad.c.o
 Space: CMakeFiles/Space.dir/build.make
 Space: CMakeFiles/Space.dir/compiler_depend.ts
-Space: /usr/lib/libglfw.so.3.4
-Space: /usr/lib/libglm.a
+Space: _deps/glfw-build/src/libglfw3.a
+Space: _deps/glm-build/glm/libglm.a
+Space: /usr/lib/librt.a
+Space: /usr/lib/libm.so
+Space: /usr/lib/libX11.so
 Space: /usr/lib/libGLX.so
 Space: /usr/lib/libOpenGL.so
 Space: CMakeFiles/Space.dir/link.txt
