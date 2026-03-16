@@ -1,4 +1,0 @@
-/home/twhite/Projects/space/2d_new/build/CMakeFiles/Maps.dir
-/home/twhite/Projects/space/2d_new/build/CMakeFiles/run.dir
-/home/twhite/Projects/space/2d_new/build/CMakeFiles/edit_cache.dir
-/home/twhite/Projects/space/2d_new/build/CMakeFiles/rebuild_cache.dir

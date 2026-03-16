@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/Maps.dir/link.d CMakeFiles/Maps.dir/src/main.cpp.o -o Maps  /usr/lib/libSDL3.so.0.4.2 /usr/lib/libglm.a

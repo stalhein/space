@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/twhite/Projects/space/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
