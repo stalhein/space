@@ -5,7 +5,7 @@
 
 enum CameraDirections { FORWARD, BACKWARD, UP, DOWN, RIGHT, LEFT };
 
-constexpr float SPEED = 100.f;
+constexpr float SPEED = 500.f;
 constexpr float SENSITIVITY = 0.1f;
 
 class Camera {
@@ -20,8 +20,9 @@ public:
     updateCameraVectors();
   }
 
-  glm::mat4 getViewMatrix() {
-    return glm::lookAt(position, position + front, up);
+  glm::mat4 getViewMatrix(float renderConstant) {
+    return glm::lookAt(position * glm::vec3(renderConstant),
+                       position * glm::vec3(renderConstant) + front, up);
   }
 
   void processKeyboard(CameraDirections direction, float deltaTime) {
@@ -55,6 +56,7 @@ public:
 
     updateCameraVectors();
   }
+
 private:
   void updateCameraVectors() {
     glm::vec3 f;
