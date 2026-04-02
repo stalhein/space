@@ -6,6 +6,8 @@ A 3D N-body gravity simulation, made in C++ and OpenGL. The programme visualises
 * **N-Body Physics** Gravity is simulated upon bodies, making them move realistically.
 
 ## Prerequisits
+The programme can be run via an AppImage at [this link](https://github.com/stalhein/space/releases/tag/v1.0.0).
+
 To build and run the programme, you will need: 
 * A C++ compiler (C++17)
 * CMake (v3.16 or higher)
